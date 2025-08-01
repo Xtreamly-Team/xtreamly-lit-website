@@ -1,3 +1,4 @@
+import { ethers } from "ethers";
 import type { RequestHandler } from '@sveltejs/kit';
 
 import { fetchPkpSessionSigs, generateNewPrivateKey, initializeLit } from '$lib/lit/functions';
@@ -19,6 +20,7 @@ export const POST: RequestHandler = async ({ request }) => {
     console.log('PKP Session Sigs:', pkpSessionSigs);
     const { pkpAddress, generatedPublicKey, id } = await generateNewPrivateKey(litNodeClient, pkpSessionSigs, data.nickname);
 
+    const walletAddress = ethers.utils.computeAddress(generatedPublicKey);
 
     const response: ResponseBody = {
         received: data,
@@ -32,14 +34,15 @@ export const POST: RequestHandler = async ({ request }) => {
 
     console.log("Sending to user server")
     // Sending PkP Session Sigs to our user server
-    const res = await fetch('http://localhost:4002/user_signup', {
+    const res = await fetch('http://localhost:4002/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             pkpSessionSigs: pkpSessionSigs,
-            id: id
+            lit_id: id,
+            address: walletAddress,
         })
     });
 
