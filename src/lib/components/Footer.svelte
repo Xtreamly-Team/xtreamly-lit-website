@@ -10,9 +10,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="md:col-span-2">
                 <span class="text-blue-500 font-bold text-2xl"
-                    >Xtreamly Website</span
+                    >Xtreamly Lit</span
                 >
-                <p class="mt-4 text-gray-400">Automated wallet trading</p>
+                <p class="mt-4 text-gray-400">Automated AI trading</p>
                 <div class="mt-6 flex space-x-4">
                     <a
                         href="mailto:sogol@xtreamly.io"

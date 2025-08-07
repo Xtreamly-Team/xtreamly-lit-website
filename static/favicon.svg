@@ -1,0 +1,7 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- "D" from Decentralized (back layer) -->
+  <text x="42" y="57" text-anchor="middle" fill="#2b7fff" font-family="'Playfair Display', 'Didot', 'Times New Roman', serif" font-size="60" font-weight="700" letter-spacing="0px" font-style="italic">D</text>
+  
+  <!-- "S" from Socket (front layer, smaller offset) -->
+  <text x="58" y="73" text-anchor="middle" fill="#05df72" font-family="'Playfair Display', 'Didot', 'Times New Roman', serif" font-size="60" font-weight="700" letter-spacing="0px" font-style="italic">S</text>
+</svg>
